@@ -1,0 +1,298 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #f2f2f2;
+    font-family: "PT sans", "Arial", "Helvetica", sans-serif;
+    }
+.container {
+    max-width: 1200px;
+    background-color:#ffffff;
+    padding:0 10px;
+    margin: 0 6%;
+    box-shadow:0 7px 15px 8px rgba(60, 65, 62, 0.25);
+}
+.main-header {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    padding: 1rem;
+
+}
+main {
+    width: 100%;
+}
+.main-image{
+    width: 100%;
+}
+.img-feature {
+
+}
+.main-footer {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+.logo-img {
+    position:absolute;
+    top:0;
+    left: 46%;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1em;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+h3{
+    font-size: 21px;
+    color: #ffffff;
+}
+.main-menu .nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.main-menu .nav-link:nth-child(2) {
+    margin-right: 3rem;
+    margin-left: 7rem;
+}
+.main-menu ul {
+    flex-direction: row;
+}
+.features-list {
+    list-style: none;
+}
+.wrap-text-feature{
+    background-color: #81b3d2;
+    width: 33%;
+    height: 260px;
+    flex-wrap:wrap;
+}
+.feature-column  {
+    display: flex;
+    width: 100%;
+}
+.feature-column .img-feature {
+    display: flex;
+    height: 260px;
+}
+.feature-sub{
+    display: flex;
+}
+.feature-sub-column {
+    width: 33%;
+    list-style: none;
+}
+.wrap-text-column {
+    background-color: #eeeeee;
+    width: 33%;
+    height: 260px;
+}
+.form-map-wrap {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.title-form-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 30px 135px;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 500;
+    background-color: #766357;
+}
+.hotel-search {
+    display: inline-block;
+    width: 560px;
+    min-height: 158px;
+    margin: 0 41px;
+    position: absolute;
+    top: 169px;
+    left: 280px;
+    background-color: #ffffff;
+    color: #000000;
+}
+/*HOTELS*/
+.results-sorting {
+    padding: 35px 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.results-sorting .found {
+    color:#000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.results-sorting .sorting {
+    font-size: 1.2rem;
+    color: #000000;
+}
+.results-sorting .by-price {
+    font-size: 1rem;
+    color: #a8c9df;
+    text-decoration: none;
+
+}
+.results-sorting .by-type,
+.results-sorting .by-rating {
+    color: #b2b2b2;
+    font-size: 1rem;
+    border-bottom: 1px dotted #81b3d2;
+    text-decoration: none;
+    display: inline-block;
+    height: 1em;
+    line-height: 1.05em;
+}
+.hotel-main {
+    display: flex;
+    flex-direction: column;
+}
+.hotel-filters-wrap {
+    background-color: #55799d;
+    display: flex;
+}
+.hotel-filters-wrap fieldset {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    margin-right: 17px;
+    margin-bottom: 14px;
+    padding: 0;
+    border: none;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+fieldset legend {
+    display: flex;
+
+}
+.object-card {
+    display: flex;
+    padding: 30px 45px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
+.filter-range {
+    width: 330px;
+    text-transform: uppercase;
+}
+.filter-range-title,
+legend {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 21px;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    margin-bottom: 9px;
+}
+.price-controls {
+    height: 36px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    font-size: 0;
+    position: relative;
+  }
+  .price-controls::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  .price-controls label {
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 38px;
+    vertical-align: top;
+    cursor: pointer;
+}
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+.range-controls {
+    position: relative;
+    margin-bottom: 32px;
+}
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+.range-toggle {
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+}
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+.range-toggle:hover {
+    background: #1c4f80;
+}
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn-transparent:hover {
+    color: #000000;
+    background: #ffffff;
+}
