@@ -187,6 +187,9 @@ fieldset  {
 
     flex-direction: column;
 }
+input[type="checkbox"] {
+  display: none;
+}
 .selection-hotel {
     position: relative;
     display: flex;
