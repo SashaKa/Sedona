@@ -28,23 +28,16 @@ body{
     top:0;
     left: 46%;
 }
-h1 {
-    font-size: 2em;
-}
-h2 {
-    font-size: 1em;
-}
-
-
             /*HEADER*/
 .main-menu ul {
     flex-direction: row;
     display: flex;
     list-style: none;
+    margin: 0 6%;
 }
 .main-menu li {
-    margin-right: 15rem;
-
+    margin: 1rem 5.5rem;
+    width: 20%;
 }
 .main-menu li:nth-child(3) {
     margin-left: 20rem;
@@ -56,10 +49,22 @@ h2 {
     color: #000000;
     font-weight: 600;
     text-transform: uppercase;
-
 }
-
-                   /*MAIN-IMG*/
+.main-menu .nav-link:hover {
+    color: #81b3d2;
+}
+.main-menu .nav-link:active {
+    color: #b2b2b2;
+}
+.main-menu .current-page {
+    color: #766357;
+}
+.main-menu .current-page:hover {
+    color: #604e43;
+}
+.main-menu .current-page:active {
+    color: #d8d3d0;
+}                   /*MAIN-IMG*/
 .main-img {
   background:
   url("../img/promoframe.png") no-repeat 0px 452px,
@@ -78,18 +83,53 @@ h2 {
  main {
      width: 100%;
  }
+ .title-feature {
+     display: inline-block;
+     text-align: center;
+     width: 41%;
+     margin-left: 35rem;
+     margin-top: 5.5rem;
+     padding-bottom: 3rem;
+ }
+ h1 {
+     font-size: 2.1em;
+     padding-bottom: 3rem;
+ }
+ h2 {
+     font-size: 1.4em;
+     color: #aeaeae;
+     font-weight: 100;
+ }
+h3,
+.feature-sub-column .sub-title {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+.feature-column p,
+.feature-column span,
+.feature-sub-column .sub-text,
+.form-map-wrap .offer-for-form-1,
+.form-map-wrap .offer-for-form-2
+ {
+    font-size: 1.4rem;
+}
 .features-list {
     list-style: none;
 }
-.wrap-text-feature{
+.wrap-text-feature,
+.wrap-text-column {
     background-color: #81b3d2;
     width: 33%;
-    height: 260px;
-    flex-wrap:wrap;
+    height: 20.5rem;
+    flex-wrap: wrap;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5.5rem;
 }
 .feature-column  {
     display: flex;
     width: 100%;
+    color: #ffffff;
 }
 .feature-column .img-feature {
     display: flex;
@@ -97,43 +137,77 @@ h2 {
 }
 .feature-sub{
     display: flex;
+    background-color: #ffffff;
+    color: #333333;
+    padding-right: 0.3rem;
 }
 .feature-sub-column {
     width: 33%;
     list-style: none;
+    height: 20.5rem;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
 }
 .wrap-text-column {
     background-color: #eeeeee;
-    width: 33%;
-    height: 260px;
+    color: #333333;
+    padding-right: 0.3rem;
+}
+.feature-sub-column::before {
+    content:
 }
 
                 /*INDEX FORM*/
+.form-map-wrap  .offer {
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 600;
+}
 .form-map-wrap {
+    position: relative;
+
+}
+.offer-for-form-2 {
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+}
+.hotel-search-offer {
     display: inline-block;
     text-align: center;
     position: relative;
+    width: 41%;
+    margin-left: 37rem;
+    margin-top: 5rem;
 }
 .title-form-btn {
     display: inline-block;
     text-align: center;
-    padding: 30px 135px;
+    margin-top: 3rem;
+    padding: 30px 99px;
     color: #ffffff;
-    font-size: 1.4em;
-    font-weight: 500;
+    font-size: 2.1em;
+    font-weight: 600;
     background-color: #766357;
 }
 .hotel-search {
     display: inline-block;
-    width: 560px;
+    width: 41%;
     min-height: 158px;
     margin: 0 41px;
     position: absolute;
-    top: 169px;
-    left: 280px;
+    top: 30rem;
+    left: 321px;
     background-color: #ffffff;
     color: #000000;
 }
+.map {
+    background: url(../img/map.jpg) no-repeat center;
+    width: 100%;
+    height: 47rem;
+}
+
 
 
                     /*HOTELS*/
@@ -330,13 +404,9 @@ legend,
     color: #000000;
     background: #ffffff;
 }
-               /*FOOTER*/
-.main-footer {
-   width: 100%;
-   display: flex;
-   align-items: baseline;
-   justify-content: space-around;
-}
+
+            /*HOTELS MAIN*/
+
 .rating-image {
   margin-bottom: 47px;
   height: 17px;
@@ -355,4 +425,68 @@ legend,
 
 .rating-image-three {
   width: 65px;
+}
+               /*FOOTER*/
+.main-footer {
+   width: 100%;
+   display: flex;
+   align-items: baseline;
+   justify-content: space-around;
+   margin-left: 10rem;
+   margin-right: 10rem;
+   margin-top: 5rem;
+   background-color: rgba(255,255.255,0,5);
+
+}
+.wrap-tag {
+    width: 33%;
+}
+.wrap-tag .tag {
+    font-size: 2.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.footer-social {
+    width: 33%;
+    box-sizing: border-box;
+}
+.social-btn {
+    width: 4.6rem;
+    height: 4.8rem;
+    background-color: #81b3d2;
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+}
+.social-btn:hover {
+    background-color: #669ec0;
+}
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+}
+.social-btn-tw::before {
+    width: 22px;
+    height: 19px;
+    background-position: -35px -49px;
+}
+.social-btn-fb::before {
+    width: 22px;
+    height: 19px;
+    background-position: -4px -51px;
+}
+.social-btn-yt::before {
+    width: 22px;
+    height: 19px;
+    background-position: -10px -7px;
+}
+.footer-copyright {
+    width: 33%;
 }
