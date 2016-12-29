@@ -10,9 +10,10 @@ body{
     }
 .container {
     max-width: 1200px;
+    min-width: 768px;
     background-color:#ffffff;
     padding:0 10px;
-    margin: 0 6%;
+    margin: 0 auto;
     box-shadow:0 7px 15px 8px rgba(60, 65, 62, 0.25);
 }
 .main-header {
@@ -35,7 +36,7 @@ h2 {
 }
 
 
-            /*MENU*/
+            /*HEADER*/
 .main-menu ul {
     flex-direction: row;
     display: flex;
@@ -58,11 +59,23 @@ h2 {
 
 }
 
-                 /*INDEX CONTENT*/
+                   /*MAIN-IMG*/
+.main-img {
+  background:
+  url("../img/promoframe.png") no-repeat 0px 452px,
+  #393f3c url("../img/background.jpg") no-repeat;
+  background-size: 100%;
+}
+.title-img {
+  padding-top: 7.6rem;
+  padding-bottom: 8.4rem;
+  width: 1200px;
+  height: 352px;
+  margin-right: auto;
+  margin-left: auto;
+}
+     /*INDEX CONTENT*/
  main {
-     width: 100%;
- }
- .main-image{
      width: 100%;
  }
 .features-list {
@@ -323,4 +336,23 @@ legend,
    display: flex;
    align-items: baseline;
    justify-content: space-around;
+}
+.rating-image {
+  margin-bottom: 47px;
+  height: 17px;
+  background-image: url(../img/star.png);
+  background-repeat: repeat-x;
+  float: right;
+}
+
+.rating-image-four {
+  width: 90px;
+}
+
+.rating-image-two {
+  width: 45px;
+}
+
+.rating-image-three {
+  width: 65px;
 }
