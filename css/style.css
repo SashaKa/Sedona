@@ -430,24 +430,40 @@ legend,
 .main-footer {
    width: 100%;
    display: flex;
-   align-items: baseline;
+   align-items: center;;
    justify-content: space-around;
-   margin-left: 10rem;
-   margin-right: 10rem;
-   margin-top: 5rem;
+   margin-left: 5rem;
+   margin-top: 3.5rem;
    background-color: rgba(255,255.255,0,5);
 
 }
 .wrap-tag {
     width: 33%;
+    margin-bottom: 3.5rem;
 }
 .wrap-tag .tag {
+    text-decoration: none;
+    color: #000000;
     font-size: 2.1rem;
     font-weight: 600;
     text-transform: uppercase;
 }
+.wrap-tag .tag:hover {
+    color: #81b3d2;
+}
+.wrap-tag .tag:active {
+    color: #bdbbbc;
+}
+.footer-copyright .copyright-link:hover {
+    background-image: url(../img/html-logo-hover.svg);
+}
+.footer-copyright .copyright-link:active {
+    background-image: url(..img/logo-html-down.svg);
+}
+
 .footer-social {
     width: 33%;
+    margin-bottom: 3.5rem;
     box-sizing: border-box;
 }
 .social-btn {
@@ -489,4 +505,12 @@ legend,
 }
 .footer-copyright {
     width: 33%;
+    margin-bottom: 3.5rem;
+
+}
+.footer-copyright .copyright {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    vertical-align: bottom;
 }
