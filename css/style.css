@@ -26,7 +26,7 @@ body{
 .logo-img {
     position:absolute;
     top:0;
-    left: 46%;
+    left: 42%;
 }
             /*HEADER*/
 .main-menu ul {
@@ -34,6 +34,7 @@ body{
     display: flex;
     list-style: none;
     margin: 0 6%;
+    padding: 0;
 }
 .main-menu li {
     margin: 1rem 5.5rem;
@@ -192,16 +193,43 @@ h3,
     background-color: #766357;
 }
 .hotel-search {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 41%;
     min-height: 158px;
     margin: 0 41px;
     position: absolute;
     top: 30rem;
-    left: 321px;
+    left: 331px;
     background-color: #ffffff;
     color: #000000;
 }
+.hotel-search>.search-form {
+    flex:1;
+    min-width: 0;
+}
+.search-form>p {
+    display: flex;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+}
+.search-form>p:first-child {
+    margin-top: 5rem;
+}
+.hotel-search input:not([type=submit]) {
+    flex: 1;
+    margin-left: 2rem;
+}
+.search-form {
+    display: flex;
+    flex-direction: column;
+}
+.hotel-search .childrens
+{
+    max-width: 10rem;
+}
+
 .map {
     background: url(../img/map.jpg) no-repeat center;
     width: 100%;
@@ -405,33 +433,65 @@ legend,
     background: #ffffff;
 }
 
-            /*HOTELS MAIN*/
 
+            /*HOTELS MAIN*/
+.about-object-wrap {
+    display: flex;
+    flex-direction: column;
+}
 .rating-image {
-  margin-bottom: 47px;
+  margin-bottom: 4.2rem;
   height: 17px;
   background-image: url(../img/star.png);
   background-repeat: repeat-x;
-  float: right;
+  margin-left: auto;
 }
-
+.about-object-wrap span:not(.name-object) {
+    font-size: 1.4rem;
+}
+.rating-object-wrap {
+    margin-left: auto;
+}
+.object-card img {
+    margin-right: 2rem;
+}
 .rating-image-four {
-  width: 84px;
+  width: 71px;
 }
 
 .rating-image-two {
-  width: 45px;
+  width: 38px;
 }
 
 .rating-image-three {
-  width: 65px;
+  width: 54px;
+}
+.rating-meaning {
+    background-color: #f2f2f2;
+    font-size: 1.4rem;
+    font-weight: normal;
+    padding: 0.5rem 1.4rem;
 }
 .name-object {
     font-size: 2.1rem;
-    font-weight: 400;
+    font-weight: 600;
 }
-
-
+.object-btn {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+.object-btn a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+}
+.more-about-object {
+    background-color: #81b3d2;
+}
+.booking {
+    background-color: #766357;
+}
                /*FOOTER*/
 .main-footer {
    width: 100%;
