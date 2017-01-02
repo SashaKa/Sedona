@@ -416,7 +416,7 @@ legend,
 }
 
 .rating-image-four {
-  width: 90px;
+  width: 84px;
 }
 
 .rating-image-two {
@@ -426,6 +426,12 @@ legend,
 .rating-image-three {
   width: 65px;
 }
+.name-object {
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
+
                /*FOOTER*/
 .main-footer {
    width: 100%;
@@ -447,6 +453,7 @@ legend,
     font-size: 2.1rem;
     font-weight: 600;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .wrap-tag .tag:hover {
     color: #81b3d2;
@@ -491,7 +498,7 @@ legend,
 .social-btn-tw::before {
     width: 22px;
     height: 19px;
-    background-position: -35px -49px;
+    background-position: -169px -66px;
 }
 .social-btn-fb::before {
     width: 22px;
@@ -506,6 +513,7 @@ legend,
 .footer-copyright {
     width: 33%;
     margin-bottom: 3.5rem;
+    position: relative;
 
 }
 .footer-copyright .copyright {
@@ -513,4 +521,30 @@ legend,
     margin-right: 0.5rem;
     display: inline-block;
     vertical-align: bottom;
+}
+.copyright-link {
+    display: inline-block;
+    font-size: 0;
+    cursor: pointer;
+}
+.copyright-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 82px;
+    background-image: url(../img/sprite.png);
+    width: 125px;
+    height:  44px;
+    background-position: -39px -51px;
+
+}
+.copyright-link:hover::before {
+    background: url(../img/sprite.png);
+    background-position: -178px -9px;
+
+}
+.copyright-link:active::before {
+    background: url(../img/sprite.png);
+    background-position: 0 -110px;
+
 }
