@@ -187,7 +187,8 @@ h3,
     display: inline-block;
     text-align: center;
     margin-top: 3rem;
-    padding: 3rem 7rem;
+    width: 100%;
+    padding: 3rem 0;
     color: #ffffff;
     font-size: 2.1em;
     font-weight: 500;
@@ -276,12 +277,12 @@ h3,
     font-weight: 600;
     max-width: 1rem;
     padding: 1rem 5rem;
+    position: relative;
 }
 .hotel-search input {
     background-color: #f2f2f2;
     border: none;
     padding: 1rem;
-    position: relative;
 }
 .hotel-search input:hover {
     background-color: #ebebeb;
@@ -293,11 +294,32 @@ h3,
 .hotel-search label {
     font-size: 1.4rem;
     font-weight: 600;
+    position: relative;
 }
-.hotel-search button {
+
+.search-form input[id="adults"]+.minus-btn {
+    position: absolute;
+    border: none;
+    width: 12px;
+    height: 3px;
+    background-color: #a9a9a9;
+    top: 221px;
+    left: 145px;
+}
+.search-form input[id="adults"]+.plus-btn {
+    position: absolute;
+    border: none;
+    width: 12px;
+    height: 3px;
+    background-color: #a9a9a9;
+    top: 221px;
+    left: 195px;
+}
+.hotel-search .hotel-search-btn {
     font-size: 2.1rem;
     border: none;
-    padding: 1rem 15rem;
+    width: 100%;
+    padding: 1.5rem 0;
     background-color: #81b3d2;
     color: #ffffff;
     margin-top: 2rem;
