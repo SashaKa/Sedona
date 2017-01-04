@@ -96,7 +96,7 @@
                         </div>
                     </div>
                 </section>
-                <div class="form-map-wrap">
+                <div class="form-map-wrap modal-content">
                     <div class="hotel-search-offer">
                         <span class="offer">Заинтересовались?</span>
                         <p class="offer-for-form-1">Укажите предполагаемые даты поездки,</p>
@@ -117,11 +117,13 @@
                             </p>
                             <p class="amounts-choice">
                                 <label for="adults">Взрослые:</label>
-                                    <input id="adults" type="text"value="2">
-                                    <span class="minus-btn"></span>
-                                    <span class="plus-btn"></span>
+                                <input name="adults" type="text"value="2">
+                                <button class="minus-btn">-</button>
+                                <button class="plus-btn">+</button>
                                 <label for="childrens">Дети:</label>
-                                    <input id="childrens" type="text"value="0">
+                                <input name="childrens" type="text"value="0">
+                                <button class="minus-btn">-</button>
+                                <button class="plus-btn">+</button>
                             </p>
                             <p>
                                 <button class="hotel-search-btn" type"submit">Найти</button>

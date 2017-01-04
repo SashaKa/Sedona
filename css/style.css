@@ -199,9 +199,9 @@ h3,
 .hotel-search {
     display: flex;
     flex-direction: column;
-    width: 39%;
+    width: 41%;
     min-height: 158px;
-    margin: 0 41px;
+    margin: 2px 29px;
     position: absolute;
     top: 29.7rem;
     left: 341px;
@@ -269,51 +269,90 @@ h3,
     background-position: -44px -5px;
 
 }
-.hotel-search input[id=adults],
-.hotel-search input[id=childrens] {
-    margin-left: 1rem;
-    margin-right: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    max-width: 1rem;
-    padding: 1rem 5rem;
-    position: relative;
-}
-.hotel-search input {
+.hotel-search input[name=date] {
     background-color: #f2f2f2;
     border: none;
     padding: 1rem;
+    cursor: pointer;
 }
 .hotel-search input:hover {
     background-color: #ebebeb;
 }
 .hotel-search input:focus {
     background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    outline: 2px solid #e5e5e5;
 }
 .hotel-search label {
     font-size: 1.4rem;
     font-weight: 600;
     position: relative;
 }
-
-.search-form input[id="adults"]+.minus-btn {
-    position: absolute;
-    border: none;
-    width: 12px;
-    height: 3px;
-    background-color: #a9a9a9;
-    top: 221px;
-    left: 145px;
+.hotel-search input::-webkit-input-placeholder {
+	color: #000000;
+	opacity: 1;
 }
-.search-form input[id="adults"]+.plus-btn {
-    position: absolute;
-    border: none;
-    width: 12px;
-    height: 3px;
-    background-color: #a9a9a9;
-    top: 221px;
-    left: 195px;
+.hotel-search input::-moz-placeholder {
+	color: #000000;
+	opacity: 1;
+}
+.hotel-search input:-ms-input-placeholder {
+	color: #000000;
+	opacity: 1;
+}
+.hotel-search input ::placeholder {
+	color: #000000;
+	opacity: 1;
+}
+.hotel-search input[name=adults],
+.hotel-search input[name=childrens] {
+   margin-left: 4rem;
+   margin-right: 0.5rem;
+   font-size: 1.4rem;
+   font-weight: 600;
+   padding: 1rem 3.8rem;
+   box-sizing: content-box;
+   width: 1rem;
+   background-color: #f2f2f2;
+   border: none;
+   cursor: pointer;
+   position: relative;
+
+}
+.minus-btn,
+.plus-btn {
+   position: absolute;
+   margin: 0;
+   font-weight: 700;
+   font-size: 21px;
+   color: #a9a9a9;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+input[name=adults]+.minus-btn {
+   padding: 7px 14px;
+   left:160px;
+}
+
+input[name=adults]+.minus-btn+.plus-btn {
+    left: 223px;
+    top: 211px;
+}
+input[name=childrens]+.minus-btn {
+    left: 345px;
+    top: 208px;
+}
+input[name=childrens]+.minus-btn+.plus-btn {
+    left: 394px;
+    top: 210px;
+}
+
+.childrens .minus-btn {
+   left: 10px;
+}
+.childrens .plus-btn {
+
 }
 .hotel-search .hotel-search-btn {
     font-size: 2.1rem;
@@ -321,9 +360,18 @@ h3,
     width: 100%;
     padding: 1.5rem 0;
     background-color: #81b3d2;
-    color: #ffffff;
+    color: #eef5f9;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    cursor: pointer;
+}
+.hotel-search .hotel-search-btn:hover {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+.hotel-search .hotel-search-btn:active {
+    background-color: #5496bd;
+    color: #88b6d1;
 }
 .map {
     background: url(../img/map.jpg) no-repeat center;
@@ -627,6 +675,7 @@ legend,
     width: 33%;
     margin-bottom: 3.5rem;
     box-sizing: border-box;
+    margin-left: 17rem;
 }
 .social-btn {
     width: 4.6rem;
