@@ -107,13 +107,13 @@
                         <div class="search-form">
                             <p>
                                 <label for="check-in">Дата заезда:</label>
-                                    <input id="check-in"type="text"name="date"value="24 апреля 2016">
-                                    <span class="calendar calendar-check-in"></span>
+                                <input id="check-in"type="text"name="date"value="24 апреля 2016">
+                                <span class="calendar calendar-check-in"></span>
                             </p>
                             <p>
                                 <label for="check-out">Дата выезда:</label>
-                                    <input id="check-out"type="text"name="date"value="4 июля 2016">
-                                    <span class="calendar calendar-check-out"></span>
+                                <input id="check-out"type="text"name="date"value="4 июля 2016">
+                                <span class="calendar calendar-check-out"></span>
                             </p>
                             <p class="amounts-choice">
                                 <label for="adults">Взрослые:</label>
@@ -149,5 +149,14 @@
                 </section>
             </footer>
         </div>
+        <script>
+            var. button = document .quarySelector(".title-form-btn");
+            var. form = document . quarySelector(".hotel-search");
+
+            button .addEventListener("click",function(event));{
+            event.PreventDefault();
+            form .classList .add(".hotel-search-show");
+            });
+        </script>
     </body>
 </html>
