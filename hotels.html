@@ -15,16 +15,16 @@
                 </a>
                 <nav class="main-menu">
                     <ul>
-                        <li>
+                        <li class="left-side">
                             <a href="#" class="nav-link">Информация</a>
                         </li>
-                        <li>
+                        <li class="left-side">
                             <a href="#"class="nav-link">Фото и видео</a>
                         </li>
-                        <li>
+                        <li class="right-side">
                             <a href="#"class="nav-link">Карта штата</a>
                         </li>
-                        <li>
+                        <li class="right-side">
                             <a href=""class="nav-link current-page">Гостиницы</a>
                         </li>
                     </ul>
@@ -34,33 +34,38 @@
                 <div class="hotel-filters-wrap">
                     <form class="selection-hotel" action="form.php" method="get">
                         <fieldset class="infrastructure">
-                            <legend>Инфраструктура</legend>
-                                <label class="infrastructure-label infrastructure-label-1">
-                                    <input class="infrastructure-toggle"type="checkbox"name="pool" value="pool" checked>
-                                    <span class="infrastructure-name">Бассейн</span>
+                            <legend>Инфраструктура:</legend>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="pool" value="infrastructure" checked>
+                                    <span class="checkbox-indicator"></span>
+                                    Бассейн
                                 </label>
-                                <label class="infrastructure-label infrastructure-label-2">
-                                    <input class="infrastructure-toggle"type="checkbox"name="parking" value="parking">
-                                    <span class="infrastructure-name">Парковка</span>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox"name="parking" value="infrastructure">
+                                    <span class="checkbox-indicator"></span>
+                                    Парковка
                                 </label>
-                                <label class="infrastructure-label infrastructure-label-3">
-                                    <input class="infrastructure-toggle"type="checkbox"name="wi-fi" value="wi-fi">
-                                    <span class="infrastructure-name">Wi-fi</span>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox"name="wi-fi" value="infrastructure">
+                                    <span class="checkbox-indicator"></span>
+                                    Wi-fi
                                 </label>
                         </fieldset>
                         <fieldset class="property-type">
-                            <legend>ТИП ЖИЛЬЯ</legend>
-                                <label class="property-label property-label-1">
-                                    <input type="checkbox" name="hotel"value="hotel"checked>
-                                    <span class="property-name">Отель</span>
+                            <legend>ТИП ЖИЛЬЯ:</legend>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox"name="hotel"value="property-type"checked>
+                                    <span class="checkbox-indicator"></span>
+                                    Отель
                                 </label>
-                                <label class="property-label property-label-2">
-                                    <input type="checkbox" name="motel"value="motel"checked>
-                                    <span class="property-name">Мотель</span>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox"name="motel"value="property-type"checked>
+                                    <span class="checkbox-indicator"></span>Мотель
                                 </label>
-                                <label class="property-label property-label-3">
-                                    <input type="checkbox" name="apartment"value="apartment"checked>
-                                    <span class="property-name">Апартаменты</span>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox"name="apartment"value="property-type"checked>
+                                    <span class="checkbox-indicator"></span>
+                                    Апартаменты
                                 </label>
                         </fieldset>
                         <fieldset class="filter-range">
@@ -146,7 +151,7 @@
                 <div class="wrap-tag">
                     <span class="tag">#VISITSEDONA</span>
                 </div>
-                <section class="footer-copyright">
+                <section class="footer-social">
                     <a class="social-btn social-btn-tw" href="#">Твиттер</a>
                     <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
                     <a class="social-btn social-btn-yt" href="#">Ютьюб</a>

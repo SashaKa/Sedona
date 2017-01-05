@@ -43,6 +43,10 @@ body{
 .main-menu li:nth-child(3) {
     margin-left: 20rem;
 }
+.main-menu .left-side:first-child {
+    margin-left: 1rem;
+    margin-right: 8.2rem;
+}
 .main-menu .nav-link{
     text-decoration: none;
     color: #000000;
@@ -242,12 +246,12 @@ h3,
 }
 .search-form .calendar-check-in {
     top: 52px;
-    left: 380px;
+    left: 402px;
     background-position: -44px -5px;
 }
 .search-form .calendar-check-out {
     top: 128px;
-    left: 380px;
+    left: 402px;
     background-position: -44px -5px;
 }
 .search-form .calendar-check-in:hover {
@@ -337,22 +341,22 @@ input[name=adults]+.minus-btn {
 
 input[name=adults]+.minus-btn+.plus-btn {
     left: 223px;
-    top: 211px;
+    top: 209px;
 }
 input[name=childrens]+.minus-btn {
-    left: 345px;
-    top: 208px;
+    left: 355px;
+    top: 209px;
 }
 input[name=childrens]+.minus-btn+.plus-btn {
-    left: 394px;
-    top: 210px;
+    left: 406px;
+    top: 209px;
 }
-
-.childrens .minus-btn {
-   left: 10px;
+ .amounts-choice input[name=childrens] {
+    margin-left: 1.2rem;
 }
-.childrens .plus-btn {
-
+label[for=childrens] {
+    margin-left: 3rem;
+    margin-right: 1rem;
 }
 .hotel-search .hotel-search-btn {
     font-size: 2.1rem;
@@ -382,8 +386,11 @@ input[name=childrens]+.minus-btn+.plus-btn {
 
 
                     /*HOTELS*/
-
-
+.hotel-main {
+    display: flex;
+    flex-direction: column;
+}
+/*ВАРИАНТЫ СОРТИРОВКИ*/
 .results-sorting {
     padding: 35px 40px;
     display: flex;
@@ -414,19 +421,17 @@ input[name=childrens]+.minus-btn+.plus-btn {
     height: 1em;
     line-height: 1.05em;
 }
-.hotel-main {
-    display: flex;
-    flex-direction: column;
-}
+/*ФИЛЬТРЫ ОТЕЛЕЙ*/
 .hotel-filters-wrap {
     background-color: #55799d;
     display: flex;
+    background-image: url(../img/filter-background.jpg);
+    height: 217px;
+    width: 100%
 }
 .hotel-filters-wrap fieldset {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 5rem;
-    margin-left: 5.2rem;
+    margin-right: 13rem;
+    margin-left: 8.2rem;
     margin-bottom: 1.4rem;
     padding-bottom: 10rem;
     border: none;
@@ -435,38 +440,88 @@ input[name=childrens]+.minus-btn+.plus-btn {
     font-weight: 500;
     color: #ffffff;
 }
-fieldset legend {
-    display: flex;
-}
-fieldset .infrastructure {
-    margin-left: 5rem;
-}
-fieldset  {
-
-    flex-direction: column;
-}
-input[type="checkbox"] {
-  display: none;
-}
 .selection-hotel {
     position: relative;
     display: flex;
 }
-
-.object-card {
+fieldset legend {
     display: flex;
-    padding: 30px 45px;
-    justify-content: space-between;
-    border-bottom: 1px solid #e5e5e5;
-    border-top: 1px solid #e5e5e5;
 }
+fieldset  {
+    display: flex;
+    flex-direction: column;
+}
+fieldset .infrastructure {
+    margin-left: 5rem;
+    margin-right: 16rem;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.infrastructure label,
+.property-type label {
+    padding-left: 3rem;
+    padding-top: 3rem;
+    position: relative;
+}
+input[type=checkbox]+.checkbox-indicator {
+    position: absolute;
+    top: 30px;
+    left: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 25%;
+    border: 2px solid #fefefe;
+    opacity: 0.8;
+}
+input[type=checkbox]:checked+.checkbox-indicator {
+    opacity: 1;
+}
+input[type=checkbox]:disabled+.checkbox-indicator {
+    opacity: 0.5;
+}
+input[type=checkbox]:checked+.checkbox-indicator::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 22px;
+    top: -4px;
+    left: 11px;
+    border-radius: 15%;
+    background-color: #ffffff;
+}
+input[type=checkbox]:checked+.checkbox-indicator::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    top: 7px;
+    left: 2px;
+    border-radius: 15%;
+    background-color: #ffffff;
+}
+input[type=checkbox]:checked+.checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+input[type=checkbox]:checked+.checkbox-indicator::after {
+    transform: rotate(-45deg);
 
-            /*FILTER*/
+}
+input[type=checkbox]:checked+.checkbox-indicator::before:disabled, input[type=checkbox]:checked+.checkbox-indicator::after:disabled {
+    opacity: 0.5;
+}
+/*ФИЛЬТР ЦЕН*/
 .filter-range {
     width: 330px;
     text-transform: uppercase;
 }
-legend,
+.selection-hotel legend {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 21px;
+    padding-top: 25px;
+
+}
 .filter-range-title {
     font-size: 1.6rem;
     font-weight: 600;
@@ -569,7 +624,7 @@ legend,
     cursor: pointer;
     position: absolute;
     left: 91rem;
-    bottom: 6rem;
+    bottom: 2rem;
 }
 .btn-transparent:hover {
     color: #000000;
@@ -581,6 +636,13 @@ legend,
 .about-object-wrap {
     display: flex;
     flex-direction: column;
+}
+.object-card {
+    display: flex;
+    padding: 30px 45px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 .rating-image {
   margin-bottom: 4.2rem;
@@ -641,14 +703,14 @@ legend,
    display: flex;
    align-items: center;;
    justify-content: space-around;
-   margin-left: 5rem;
    margin-top: 3.5rem;
-   background-color: rgba(255,255.255,0,5);
 
 }
 .wrap-tag {
     width: 33%;
     margin-bottom: 3.5rem;
+    display: inline-block;
+    text-align: center;
 }
 .wrap-tag .tag {
     text-decoration: none;
@@ -664,18 +726,13 @@ legend,
 .wrap-tag .tag:active {
     color: #bdbbbc;
 }
-.footer-copyright .copyright-link:hover {
-    background-image: url(../img/html-logo-hover.svg);
-}
-.footer-copyright .copyright-link:active {
-    background-image: url(..img/logo-html-down.svg);
-}
 
 .footer-social {
     width: 33%;
     margin-bottom: 3.5rem;
     box-sizing: border-box;
-    margin-left: 17rem;
+    display: inline-block;
+    text-align: center;
 }
 .social-btn {
     width: 4.6rem;
@@ -751,4 +808,10 @@ legend,
     background: url(../img/sprite.png);
     background-position: -478px -5px;;
 
+}
+.footer-copyright .copyright-link:hover {
+    background-image: url(../img/html-logo-hover.svg);
+}
+.footer-copyright .copyright-link:active {
+    background-image: url(..img/logo-html-down.svg);
 }
